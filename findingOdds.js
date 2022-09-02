@@ -1,4 +1,4 @@
-//Using Recursion Helper Method to find odd numbers in an array
+//Using Helper Meethod Recussion to find odd numbers in an array
 
 function oddFinder(arr) {
     let result = [];
@@ -16,6 +16,24 @@ function oddFinder(arr) {
     }
     innerFunction(arr)
     return result
+}
+
+
+// Finding odd numbers using Pure Recussion method
+
+function oddFinderR(arr) {
+    let resultArray = [];
+
+    if (arr.length === 0) {
+        return resultArray;
+    }
+
+    if (arr[0] % 2 !== 0) {
+        resultArray.push(arr[0])
+    }
+
+    resultArray = resultArray.concat(oddFinder(arr.splice(1)))
+    return resultArray;
 }
 
 
