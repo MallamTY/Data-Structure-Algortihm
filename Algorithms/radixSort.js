@@ -7,10 +7,10 @@ function digitCount(number) {
     return Math.floor(Math.log10(Math.abs(number)) + 1);
 }
 
-function maxLength(number) {
+function maxLength(numbersArray) {
     let maxLen = 0;
-    for (let i = 0; i < number.length; i++) {
-        maxLen = Math.max(maxLen, digitCount(number[i]))    
+    for (let i = 0; i < numbersArray.length; i++) {
+        maxLen = Math.max(maxLen, digitCount(numbersArray[i]))    
     }
     return maxLen;
 }
@@ -28,9 +28,10 @@ function quickSort(numArray) {
         }
         numArray = [].concat(...digitHolder);
         
+        
     }
     return numArray;
 }
 
 
-console.log(quickSort([23,67,0,221]))
+console.log(quickSort([23,67,53,221]))
